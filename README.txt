@@ -8,7 +8,10 @@ The output is a nav_msgs/Path Message on a private topic followed_path. This pat
 To build
 catkin build
 
-
 To run (in catkin worskpace)
 source devel/setup.bash
 rosrun path_plotter path_plotter_node
+
+In rviz
+add a Path
+set topic to /path_plotter_node/followed_path
