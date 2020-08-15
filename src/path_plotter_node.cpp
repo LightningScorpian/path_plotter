@@ -10,7 +10,7 @@ int main(int argc, char ** argv) {
     ros::Rate rate(2);
     while (ros::ok()) {
         ROS_INFO_STREAM("Awaiting path");
-        while (plotter.isActive()) {
+        while (plotter.isActive() && nh.ok()) {
             plotter.plot("map", "base_link");
             ros::spinOnce();
             rate.sleep();
